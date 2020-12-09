@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <title>
+           Flexbox Website Layout
+       </title>
+	<style>
+  * {
+    box-sizing: border-box; 
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+  }
+  #main {
+    display: flex;
+    flex: 1;
+  }
+  #main > article {
+    flex: 1;
+    order: 1;
+  }
+  #main > nav, 
+  #main > aside {
+    flex: 0 0 20vw;
+  }
+  #main > nav {
+    background: #D7E8D4;
+    order: 3;
+  }
+  #main > aside {
+    background: beige;
+    order: 2;
+  }
+  header, footer {
+    background: orange;
+    height: 20vh;
+  }
+  header, footer, article, nav, aside {
+    padding: 1em;
+  }
+</style>
+<body>
+   <header class="headerContainer">HEADER - Flexbox Website Layout Example</header>
+        <div class="mainContainer">
+            <section class="mainConntainerItem">
+                <article>Article</article>
+                <article>
+                    <h2>
+                        First article
+                    </h2>
+                    <p>Google Chrome is a cross-platform web browser developed by Google. It was first released in 2008.</p>
+                </article>
+      
+                <article>
+                    <h2>
+                        Second article
+                    </h2>
+                    <p>Chrome is the world's most popular web browser today!</p>
+                </article>
+                <article>
+                    <h2>
+                        Third article
+                    </h2>
+                    <p>The Google Chrome Web browser is based on the open source Chromium project. Google released Chrome in 2008 and issues several updates a year.</p>
+                </article>
+            </section>
+            <sideBar class="sideBarLeftItem">Aside</sideBar>
+            <sideBar class="sideBarRightItem">Nav</sideBar>
+        </div> 
+        <footer class="footerContainer">Footer</footer>
+    </body>
+</html>
+
+       
